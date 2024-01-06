@@ -1,10 +1,99 @@
-<html>
-  <head>
-    <title>Martin Oosthuizen | Portfolio</title>
-  </head>
-  <body>
-    <h1>Well...</h1>
-    <p>Well...
-      This would be a good time to tell you that I'm revamping this portfolio and it should be up shortly.
-    </p>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Martin Oosthuizen</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            font-family: 'Courier New', monospace;
+            color: #d4d4d4;
+            margin: 0;
+            padding: 20px;
+        }
+        .code-container {
+            white-space: pre-wrap;
+            font-size: 16px;
+            border-radius: 5px;
+            padding: 20px;
+            background-color: #1e1e1e;
+            white-space: nowrap;
+            overflow-x: auto;
+        }
+        .keyword { color: #569cd6; }
+        .string { color: #ce9178; }
+        .comment { color: #6a9955; }
+        .class-name { color: #4ec9b0; }
+    </style>
+</head>
+<body>
+    <div class="code-container">
+        <span class="comment">// JavaScript Resume: Martin Oosthuizen</span><br>
+        <span class="keyword">class</span> <span class="class-name">Professional</span> {<br>
+        &nbsp;&nbsp;<span class="keyword">constructor</span>(name, role) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.name = name;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.role = role;<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.skills = [];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.experience = [];<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.highlights = [];<br>
+        &nbsp;&nbsp;}</span><br>
+        <br>
+        &nbsp;&nbsp;<span class="keyword">addSkill</span>(skill) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.skills.push(skill);<br>
+        &nbsp;&nbsp;}</span><br>
+        &nbsp;&nbsp;<span class="keyword">addExperience</span>(experience) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.experience.push(experience);<br>
+        &nbsp;&nbsp;}</span><br>
+        &nbsp;&nbsp;<span class="keyword">addHighlight</span>(highlight) {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;this.highlights.push(highlight);<br>
+        &nbsp;&nbsp;}</span><br>
+        <br>
+        &nbsp;&nbsp;<span class="keyword">getResume</span>() {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> {<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name: this.name,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Role: this.role,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills: this.skills,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experience: this.experience,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Highlights: this.highlights<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;};<br>
+        &nbsp;&nbsp;}</span><br>
+        }<br>
+          
+        <br>
+        <span class="keyword">const</span> martin = <span class="keyword">new</span> <span class="class-name">Professional</span>('Martin Oosthuizen', 'Full-Stack Developer, Product Owner, CTO');<br>
+        <br>
+        <span class="comment">// Adding skills</span><br>
+        [<br>
+        &nbsp;&nbsp;'Turbo Pascal', <span class="comment">// The bee's knees of the stone-age</span><br>
+        &nbsp;&nbsp;'Delphi', <span class="comment">// Turbo Pascal for GUIs</span><br>
+        &nbsp;&nbsp;'Visual Basic', <span class="comment">// Great for Windows Forms-based apps</span><br>
+        &nbsp;&nbsp;'HTML', <span class="comment">// HTML 3, 4 & 5. The only UI markup we'll ever need</span><br>
+        &nbsp;&nbsp;'CSS', <span class="comment">// Worked with native CSS through its version 1, 2 & 3 journeys. More recently, use Tailwind</span><br>
+        &nbsp;&nbsp;'JavaScript', <span class="comment">// Vanilla, jQuery, DOJO, VueJS, ReactJS, NodeJS, MeteorJS</span><br>
+        &nbsp;&nbsp;'Adobe Flash', <span class="comment">// Interactive animated web experiences (visually engaging websites or games)</span><br>
+        &nbsp;&nbsp;'Adobe Director', <span class="comment">// Cross-platform multimedia desktop experiences and web games through the ShockWave plugin</span><br>
+        &nbsp;&nbsp;'Expression Suite', <span class="comment">// Used Microsoft's Expression Design and Blend for interactive touch-screen experiences</span><br>
+        &nbsp;&nbsp;'Python', <span class="comment">// OS-level scripting, Process Automation, Computer Vision, Django web backends</span><br>
+        &nbsp;&nbsp;'C# & ASP.NET', <span class="comment">// Windows Desktop apps and IIS-based backends for web applications</span><br>
+        &nbsp;&nbsp;'PHP', <span class="comment">// Flexible language for web backends</span><br>
+        &nbsp;&nbsp;'Databases', <span class="comment">// Access, MS SQL, MySQL, MongoDB</span><br>
+        &nbsp;&nbsp;'Source Control', <span class="comment">// SVN, Git, GitHub, GitLabs, BitBucket</span><br>
+        &nbsp;&nbsp;'Mobile Apps', <span class="comment">// Managing mobile deployments on Android and iOS</span><br>
+        &nbsp;&nbsp;'Infrastructure', <span class="comment">// Extensively worked in Amazon AWS, Google Cloud, Microsoft Azure, DigitalOcean</span><br>
+        &nbsp;&nbsp;'DevOps', <span class="comment">// Setup and managed deployments involving Docker, Kubernetes, and CI/CD pipelines</span><br>
+        &nbsp;&nbsp;'Artificial Intelligence',<span class="comment">// Working with various AI APIs, LLMs, and image, voice & video generation tools like OpenAI’s GPT & DALL-E, Anthropic’s Claude, MidJourney, RunwayML, StableDiffusion, and Amazon’s Bedrock</span><br>
+        ].forEach(skill => martin.addSkill(skill));<br>
+        <br>
+        <span class="comment">// Adding experiences</span><br>
+        martin.addExperience({ Company: 'iCatcher Technologies', Role: 'Co-founder and CTO', Description: 'Rich media avertising technology for the web' });<br>
+        martin.addExperience({ Company: 'DMG Studios', Role: 'Founder & CTO', Description: 'Digital multimedia agency' });<br>
+        martin.addExperience({ Company: 'Smooth', Role: 'Product Owner', Description: 'Restaurant technology stack' });<br>
+        <br>
+        <span class="comment">// Adding highlights</span><br>
+        martin.addHighlight({ Highlight: 'SABC2 Media Pack', Role: 'Lead Developer', Description: 'I worked with an Ad Agency for the SABC to produce the first ever digital media pack that shipped on a CD, could run on any PC or Mac without installing anything. This replaced their entire paper based system and was distributed nationally to all media outlets.' });<br>
+        martin.addHighlight({ Highlight: 'FIFA International', Role: 'Technical Advisor', Description: 'I was flown out to Manchester to advise on the Self Service rollout for the FIFA world cup, with Sid Blatter himself heading the meeting, and the  FIFA dev team in Barcelona joining via video conference.' });<br>
+        <br>
+        <span class="keyword">console</span>.log(martin.getResume());<br>
+    </div>
+</body>
+</html>
